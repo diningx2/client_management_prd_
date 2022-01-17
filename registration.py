@@ -92,6 +92,8 @@ def branch_registration():
             client_data['bId'].append(bId)
             st.session_state['db'].collection('ClientInfo').document(cId).set(client_data)
             st.write('登録完了')
+            st.write('bId')
+            st.code(bId)
     elif save_button:
         st.write('小分類は5個以下に設定してください')
 
